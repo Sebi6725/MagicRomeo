@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Magic Romeo – Der Mann aus Vegas</title>
+<style>
+:root{--bg:#14061f;--card:#22103a;--text:#f8f0ff;--muted:#c9b3e6;--gold:#ffcf40;--pink:#ff2e93;--line:#4a2a73;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:light){:root:not([data-theme="dark"]){--bg:#fff6fb;--card:#ffffff;--text:#2a0f3d;--muted:#6b4a85;--gold:#b8860b;--pink:#d6177a;--line:#e8c9e0}}
+:root[data-theme="dark"]{--bg:#14061f;--card:#22103a;--text:#f8f0ff;--muted:#c9b3e6;--gold:#ffcf40;--pink:#ff2e93;--line:#4a2a73}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--text);font-family:Georgia,"Times New Roman",serif;line-height:1.55}
+.wrap{max-width:720px;margin:0 auto;padding:0 20px}
+.hero{text-align:center;padding:56px 0 40px;background:radial-gradient(circle at 50% 0,rgba(255,46,147,.35),transparent 60%)}
+.tag{display:inline-block;border:1px solid var(--gold);color:var(--gold);padding:4px 14px;border-radius:99px;font:600 12px/1.6 system-ui,sans-serif;letter-spacing:.15em;text-transform:uppercase}
+h1{font-size:clamp(44px,13vw,84px);line-height:1;margin:18px 0 8px;background:linear-gradient(90deg,var(--gold),var(--pink));-webkit-background-clip:text;background-clip:text;color:transparent;font-style:italic}
+.sub{color:var(--muted);font-size:18px;margin:0 0 26px}
+.btn{display:inline-block;background:linear-gradient(90deg,var(--pink),var(--gold));color:#1a0626;border:0;border-radius:99px;padding:14px 30px;font:700 16px system-ui,sans-serif;text-decoration:none;cursor:pointer}
+h2{font-size:28px;margin:44px 0 14px;color:var(--gold)}
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:20px;margin-bottom:14px}
+.card h3{margin:0 0 6px;font-size:20px}
+.card p{margin:0;color:var(--muted)}
+.price{float:right;color:var(--gold);font:700 18px system-ui,sans-serif}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;text-align:center}
+.stats b{display:block;font-size:30px;color:var(--pink)}
+.stats span{font:13px system-ui,sans-serif;color:var(--muted)}
+blockquote{margin:0 0 14px;padding:14px 18px;border-left:4px solid var(--pink);background:var(--card);border-radius:0 12px 12px 0}
+blockquote small{display:block;color:var(--muted);margin-top:6px;font-family:system-ui,sans-serif}
+label{display:block;margin:12px 0 4px;font:600 14px system-ui,sans-serif}
+input,select,textarea{width:100%;padding:12px;border-radius:10px;border:1px solid var(--line);background:var(--bg);color:var(--text);font:16px system-ui,sans-serif}
+#ok{display:none;text-align:center}
+footer{text-align:center;color:var(--muted);font:13px system-ui,sans-serif;padding:40px 0 30px}
+</style>
+</head>
+<body>
+<header class="hero"><div class="wrap">
+<span class="tag">Live aus Las Vegas</span>
+<h1>Magic Romeo</h1>
+<p class="sub">Charme. Gold. Gefährlich gute Hüftbewegung.</p>
+<a class="btn" href="#buchen">Jetzt buchen</a>
+</div></header>
+
+<main class="wrap">
+<h2>Über Romeo</h2>
+<div class="card"><p>Aufgewachsen zwischen Slotmaschinen und Neonlicht, hat Magic Romeo schon in jedem Casino am Strip für Gänsehaut gesorgt. Sein Motto: „Was in Vegas passiert, bleibt in Vegas – außer die Zugabe.“ Heute ermittelt er unauffällig in deiner Nähe. Natürlich nur als Zeuge. Er war es nicht.</p></div>
+<div class="stats">
+<div class="card"><b>1.000+</b><span>Auftritte</span></div>
+<div class="card"><b>0</b><span>Morde (offiziell)</span></div>
+<div class="card"><b>100%</b><span>Selbstvertrauen</span></div>
+</div>
+
+<h2>Pakete</h2>
+<div class="card"><span class="price">99 €</span><h3>Der Kennenlern-Tanz</h3><p>Ein Song, ein Blick, ein Alibi.</p></div>
+<div class="card"><span class="price">249 €</span><h3>Das Krimidinner-Special</h3><p>Verdächtig auftreten, Hinweise fallen lassen, Show stehlen.</p></div>
+<div class="card"><span class="price">Auf Anfrage</span><h3>Die Vegas-Nacht</h3><p>Inklusive Zugabe, Zugabe und noch einer Zugabe.</p></div>
+
+<h2>Stimmen</h2>
+<blockquote>„Ich habe nichts gesehen, aber ich werde es nie vergessen.“<small>– Zeugin Nr. 3</small></blockquote>
+<blockquote>„Der Kommissar hat die Ermittlungen unterbrochen, um zuzuschauen.“<small>– Anonym, aber beeindruckt</small></blockquote>
+
+<h2 id="buchen">Romeo buchen</h2>
+<div class="card">
+<form onsubmit="return false" id="f">
+<label for="n">Dein Name</label><input id="n" placeholder="z. B. Gräfin von Hinterhof">
+<label for="p">Paket</label>
+<select id="p"><option>Der Kennenlern-Tanz</option><option>Das Krimidinner-Special</option><option>Die Vegas-Nacht</option></select>
+<label for="m">Besondere Wünsche</label><textarea id="m" rows="3" placeholder="Alibi gewünscht?"></textarea>
+<p style="margin-top:16px"><button class="btn" id="b" type="button">Anfrage senden</button></p>
+</form>
+<div id="ok"><h3 style="color:var(--gold);font-size:24px">Anfrage eingegangen!</h3><p id="t"></p></div>
+</div>
+</main>
+<footer>© Magic Romeo Entertainment, Las Vegas · Alle Angaben ohne Gewähr, alle Verdächtigen unschuldig</footer>
+
+<script>
+document.getElementById('b').addEventListener('click',function(){
+var n=document.getElementById('n').value.trim()||'Mysteriöser Gast';
+var p=document.getElementById('p').value;
+document.getElementById('f').style.display='none';
+document.getElementById('t').textContent='Danke, '+n+'! Magic Romeo prüft deine Anfrage für „'+p+'“ und meldet sich diskret. Er war übrigens zur Tatzeit beim Friseur.';
+document.getElementById('ok').style.display='block';
+});
+</script>
+</body>
+</html>
